@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+@layer base {
+    :root {
+        /*
+            primary/secondary/dark palette: https://colorhunt.co/palette/e4c59eaf8260803d3b322c2b
+            color palette: https://colorhunt.co/palette/a34343e9c874fbf8ddc0d6e8
+        */
+
+        --color-fg: 252 250 240;
+        --color-fg-mute: 157 173 181;
+
+        --color-bg: 18 28 40;
+        --color-bg-mute: 6 11 17;
+
+        --color-primary: 228 197 158;
+        --color-primary-mute: 175 130 96;
+        --color-secondary: 128 61 59;
+
+        --color-green: 176 197 154;
+        --color-red: 211 118 118;
+        --color-orange: 235 196 159;
+        --color-yellow: 241 239 153;
+        --color-blue: 64 177 222;
+
+        --scrollbar-track: rgb(var(--color-bg));
+        --scrollbar-thumb: rgb(var(--color-bg-mute));
+    }
+
+    body {
+        @apply bg-bg-mute text-fg select-none;
+        font-family: "Play", sans-serif;
+    }
+
+    h1 {
+        @apply text-2xl font-bold;
+    }
+
+    h2 {
+        @apply text-lg font-bold;
+    }
+
+    h3, h4, h5, h6 {
+        @apply font-bold;
+    }
+
+    kbd {
+        @apply font-bold px-1 py-0.5 bg-fg bg-opacity-10 rounded;
+        font-size: 90%;
+    }
+
+    /***** SCROLLBAR *****/
+
+    /* Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    }
+    
+    /* Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 15px;
+    }
+    
+    *::-webkit-scrollbar-track {
+        background: var(--scrollbar-track);
+        border-radius: 5px;
+    }
+    
+    *::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb);
+        border-radius: 14px;
+        border: 3px solid var(--scrollbar-track);
+    }
+}
