@@ -48,7 +48,7 @@ Try to chat with each of the characters above to reveal the secret PIN of the re
 **Tip: Our report [here](./docs/Report_Engineering%20Secure%20Generative%20Agents_A%20Campus%20Simulation.pdf) provides a detailed analysis of possible prompt techniques you could use.**
 
 ## Infrastructure: Quick Overview of Frameworks, Developed Software Modules, Memory and RAG
-This game environment was developed using [Colyseus](https://colyseus.io/), which is a real-time multiplayer framework for node.js. [Phaser 3](https://phaser.io/) was used for the frontend graphics and [Vue.js](https://vuejs.org/) for the UI elements.
+This game environment was developed using [Colyseus](https://colyseus.io/), which is a real-time multiplayer framework for Node.js. [Phaser 3](https://phaser.io/) was used for the frontend graphics and [Vue.js](https://vuejs.org/) for the UI elements.
 
 Each agent in the world is initialized with a certain character **seed**, which is the main character description that is used to generate dialogs, determine an agent's actions or their next destination.
 
@@ -85,9 +85,9 @@ Our detailed report [here](./docs/Report_Engineering%20Secure%20Generative%20Age
 
 
 ## Repository Structure
-* **docs**: Contains the images for this readme and our report.
+* **docs**: Contains the images for this README and our report.
 * **public**: Contains all public server resources, such as character images, tilesets, index.html and so on.
-* **Security_analysis**: Contains Jupyter notebooks used to evaluate the security of our playground. (This folder is not needed for the web application itself.)
+* **security_analysis**: Contains Jupyter notebooks used to evaluate the security of our playground. (This folder is not needed for the web application itself.)
 * **server-files/pdfs**: Contains different research papers that are stored in a document vector store. You can add or remove PDF files from this folder without restrictions; the server will automatically detect and process them at startup.
 * **src**: Contains all source code files in TypeScript used to build the corresponding JavaScript files that run on our server. The folder contains three subfolders:
   * **client**: all source code that runs on the client, i. e., the code is served to the client and thus, publicly available and accessible by the users. We use [Phaser](https://phaser.io/) on the client-side, which reduces the manual effort required for the visualization of the characters, map design, etc. You can see error messages related to the client-side in the dev console in the browser. 
@@ -130,7 +130,7 @@ Note: This is a research project. Do NOT run this code in production; it is not 
 This project was inspired by the results of [this paper](https://storage.googleapis.com/gweb-research2023-media/pubtools/7070.pdf)
 > Generative Agents: Interactive Simulacra of Human Behavior
 > 
-> by Joon Sung Park, Joseph C. O'Brien, Carrie Ca, Meredith Ringel Morris, Percy Liang, Michael Bernstein
+> by Joon Sung Park, Joseph C. O'Brien, Carrie Cai, Meredith Ringel Morris, Percy Liang, Michael Bernstein
 
 showcasing the possible use of LLMs for realistically simulating human behavior. Also, the memory module or dialog generation module were inspired by that paper. However, we had to adapt and change certain modules of that paper, as our goal was to create a simulation where the player can interact with the whole world and other agents in real-time.
 
